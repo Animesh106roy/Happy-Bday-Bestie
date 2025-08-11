@@ -56,20 +56,35 @@ nav a.active, nav a[aria-current="page"] {
 /* Mobile: stack and extra shadow for touchscreen pop! */
 @media (max-width: 600px) {
   nav {
-    border-radius: 22px;
-    box-shadow: 0 8px 36px rgba(255,105,180,0.21);
+    background: transparent; /* let buttons stand out */
+    box-shadow: none;
+    padding: 8px 0;
   }
   nav a {
     display: block;
-    margin: 11px auto;
-    width: 90%;
-    font-size: 1.3em;
+    width: 92%;
+    margin: 18px auto; /* more space between buttons */
+    font-size: 1.18em;
     font-weight: bold;
     padding: 16px 0;
-    border-radius: 30px;
-    box-shadow: 0 6px 22px #ffcaf7;
+    box-shadow: 0 4px 16px #ffd0ec;
+    border-radius: 23px;
+    background: linear-gradient(90deg, #ff99b2 80%, #ffdde1 100%);
+    color: #fff;
+    transition: 
+      background 0.28s, 
+      color 0.21s, 
+      box-shadow 0.16s, 
+      transform 0.16s;
+  }
+  nav a:hover, nav a:focus {
+    background: #fff3f8;
+    color: #ff218c;
+    box-shadow: 0 0 24px #ffcaf7;
+    transform: scale(1.06);
   }
 }
+
 
 
 /* Main */
