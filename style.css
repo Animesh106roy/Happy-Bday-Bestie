@@ -56,34 +56,37 @@ nav a.active, nav a[aria-current="page"] {
 /* Mobile: stack and extra shadow for touchscreen pop! */
 @media (max-width: 600px) {
   nav {
-    background: transparent; /* let buttons stand out */
+    background: none; /* No solid block behind links */
+    padding: 15px 0 0 0;
     box-shadow: none;
-    padding: 8px 0;
   }
   nav a {
     display: block;
-    width: 92%;
-    margin: 18px auto; /* more space between buttons */
-    font-size: 1.18em;
+    width: 88%;
+    margin: 18px auto; /* Much more gap! */
+    font-size: 1.22em;
     font-weight: bold;
-    padding: 16px 0;
-    box-shadow: 0 4px 16px #ffd0ec;
-    border-radius: 23px;
-    background: linear-gradient(90deg, #ff99b2 80%, #ffdde1 100%);
-    color: #fff;
-    transition: 
-      background 0.28s, 
-      color 0.21s, 
-      box-shadow 0.16s, 
-      transform 0.16s;
-  }
-  nav a:hover, nav a:focus {
-    background: #fff3f8;
+    padding: 17px 0;
+    border-radius: 30px;
+    background: linear-gradient(90deg, #ffe6efs 65%, #ff99b2 100%);
     color: #ff218c;
-    box-shadow: 0 0 24px #ffcaf7;
-    transform: scale(1.06);
+    box-shadow: 0 6px 22px #ffd6ee;
+    border: 1.5px solid #ffe3f4;
+    transition: 
+      background 0.25s, 
+      color 0.2s, 
+      box-shadow 0.22s, 
+      transform 0.15s;
+  }
+  nav a:hover, nav a:active, nav a:focus {
+    background: linear-gradient(90deg, #fff3f8 55%, #ffb6c1 100%);
+    color: #d10073;
+    box-shadow: 0 2px 16px #ffc7f2, 0 0 0 2px #ffcaf7;
+    transform: scale(1.08);
+    outline: none;
   }
 }
+
 
 
 
